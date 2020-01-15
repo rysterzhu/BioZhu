@@ -1,0 +1,11 @@
+Package: BioZhu
+Type: Package
+Title: A default package to source (Title Case)
+Version: 0.1.0
+Author: Ryster Zhu
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: A default packages to source libraries 
+    and defind some functions to make it convince.
+License: any licence
+Encoding: UTF-8
+LazyData: true
