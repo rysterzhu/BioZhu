@@ -58,8 +58,13 @@ str.split <- function(string, pattern, col.names=NA, n = Inf, simplify = T)
     data.frame() %>% `colnames<-`(if(is.blank(col.names)) 1:dim(.)[2] else col.names)
 
 
-theme_zhu = theme_bw() + theme(panel.grid= element_blank(),
-                               aspect.ratio = 0.75,
-                               text = element_text(family = "Arial",size=11))
+theme_zhu <- function(aspect.ratio=0.75,...) theme_bw() +
+    theme(panel.grid= element_blank(),
+        aspect.ratio = aspect.ratio,
+        text = element_text(family = "Arial",size=11),...)
+
+
+
+
 
 message("library done.")
