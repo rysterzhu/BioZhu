@@ -57,10 +57,10 @@ str.split <- function(string, pattern, col.names=NA, n = Inf, simplify = T)
     str_split(string, pattern, n, simplify) %>%
     data.frame() %>% `colnames<-`(if(is.blank(col.names)) 1:dim(.)[2] else col.names)
 
+extrafont::loadfonts(device = "postscript")
 theme_zhu <- function(aspect.ratio=0.75,...) theme_bw() +
     theme(panel.grid= element_blank(),
-          aspect.ratio = aspect.ratio,
-          text = element_text(family = "Arial",size=11),...)
+          aspect.ratio = aspect.ratio,...)
 
 
 message("library done.")
