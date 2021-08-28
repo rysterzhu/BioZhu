@@ -1,7 +1,7 @@
 Package: BioZhu
 Type: Package
 Title: A default package to source (Title Case)
-Version: 0.1.0
+Version: 0.2.0
 Author: Ryster Zhu
 Maintainer: The package maintainer <yourself@somewhere.net>
 Description: A default packages to source libraries 

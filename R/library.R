@@ -57,10 +57,7 @@ str.split <- function(string, pattern, col.names=NA, n = Inf, simplify = T)
     data.frame() %>% `colnames<-`(if(is.blank(col.names)) 1:dim(.)[2] else col.names)
 
 #extrafont::loadfonts(device = "postscript")
-theme_zhu <- function(aspect.ratio=0.75,
-                      axis.text.x=element_text(angle=45,hjust = 1,color = "black"),
-                      text=element_text(color = "black"),
-                      ...) theme_bw() +
+theme_zhu <- function(aspect.ratio=0.75,...) theme_bw() +
     theme(panel.grid= element_blank(),
           aspect.ratio = aspect.ratio,
           axis.text.x = axis.text.x,
