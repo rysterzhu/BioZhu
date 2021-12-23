@@ -60,8 +60,6 @@ str.split <- function(string, pattern, col.names=NA, n = Inf, simplify = T)
 theme_zhu <- function(aspect.ratio=0.75,...) theme_bw() +
     theme(panel.grid= element_blank(),
           aspect.ratio = aspect.ratio,
-          axis.text.x = axis.text.x,
-          text = text,
           ...)
 
 
