@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 suppressWarnings(library(ggplot2))
 suppressWarnings(library(ggpubr))
-=======
->>>>>>> f64fc6fd62d5d8d99917aaaf88a56598c708b6dd
 suppressWarnings(library(data.table))
 #suppressWarnings(library(reshape2, warn.conflicts = FALSE)) #conflicts with data.table
 suppressWarnings(library(magrittr))
@@ -77,5 +74,3 @@ theme_zhu <- function(aspect.ratio=0.75,...) theme_bw() +
 
 
 message("library done.")
-
-
