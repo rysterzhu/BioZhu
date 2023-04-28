@@ -1,12 +1,15 @@
+<<<<<<< HEAD
 suppressWarnings(library(ggplot2))
 suppressWarnings(library(ggpubr))
+=======
+>>>>>>> f64fc6fd62d5d8d99917aaaf88a56598c708b6dd
 suppressWarnings(library(data.table))
 #suppressWarnings(library(reshape2, warn.conflicts = FALSE)) #conflicts with data.table
 suppressWarnings(library(magrittr))
 suppressWarnings(library(pheatmap))
 suppressWarnings(library(stringr))
 suppressWarnings(library(RColorBrewer))
-
+suppressWarnings(library(ggplot2))
 # NFC=c("MII","sperm", "zygote", "2cell", "4cell", "8cell", "morula", "ICM", "TE")
 # NTC=c("cc", "6h", "14h", "2cell", "4cell", "8cell", "morula", "icm", "te", "blast")
 # SNT=c('14h', '2cell', '4cell', '6h', '8cell', 'blast', 'cc', 'icm', 'morula','te')
@@ -57,6 +60,12 @@ read.tab <- function(...,row.names=NA) data.table::fread(...) %>%
 str.split <- function(string, pattern, col.names=NA, n = Inf, simplify = T)
     str_split(string, pattern, n, simplify) %>%
     data.frame() %>% `colnames<-`(if(is.blank(col.names)) 1:dim(.)[2] else col.names)
+
+#extrafont::loadfonts(device = "postscript")
+theme_zhu <- function(aspect.ratio=0.75,...) theme_bw() +
+    theme(panel.grid= element_blank(),
+          aspect.ratio = aspect.ratio,
+          ...)
 
 
 theme_zhu <- function(aspect.ratio=0.75,...) theme_bw() +
