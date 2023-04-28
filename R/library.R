@@ -1,4 +1,5 @@
 suppressWarnings(library(ggplot2))
+suppressWarnings(library(ggpubr))
 suppressWarnings(library(data.table))
 #suppressWarnings(library(reshape2, warn.conflicts = FALSE)) #conflicts with data.table
 suppressWarnings(library(magrittr))
@@ -21,7 +22,7 @@ formals(data.frame)$stringsAsFactors <- F
 formals(write.table)$row.names=F
 formals(write.table)$quote=F
 formals(write.table)$sep="\t"
-formals(ggsave)$useDingbats=F
+#formals(ggsave)$useDingbats=F
 
 is.blank <- function(x, false.triggers=FALSE){
     if(is.function(x)) return(FALSE) # Some of the tests below trigger
@@ -61,10 +62,11 @@ str.split <- function(string, pattern, col.names=NA, n = Inf, simplify = T)
 theme_zhu <- function(aspect.ratio=0.75,...) theme_bw() +
     theme(panel.grid= element_blank(),
         aspect.ratio = aspect.ratio,
-        text = element_text(family = "Arial",size=11),...)
-
-
-
+        axis.text.x = element_text(family = "Arial",size=11,color = "black"),
+        axis.text.y = element_text(family = "Arial",size=11,color = "black"),
+        text = element_text(family = "Arial",size=11,color = "black"),...)
 
 
 message("library done.")
+
+
